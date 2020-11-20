@@ -1,0 +1,35 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.card {
+  width: 318px;
+  height: 380px;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #000;
+  position: relative;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  /*float: left; */
+    
+    
+}
+
+div{
+  display: inline-block;
+}
+

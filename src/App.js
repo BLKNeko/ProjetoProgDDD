@@ -7,7 +7,10 @@ import {
 } from 'reactstrap';
 import logo from './assets/img.svg';
 
+
+
 export default class App extends Component {
+    
 
     state = {
         dados: []
@@ -18,18 +21,23 @@ export default class App extends Component {
         const retorno = await requisicao.get("api/recompensas");
         this.setState({ dados: retorno.data });
     }
+
     
 
     render() {
         const { dados } = this.state;
         return (
             <div id="lista">
+                <span>RECOMPENSAS</span>                        
+                <hr></hr>
                 {console.log(dados)}
                 {dados.map(recompensa => (
                     <div>
+
                         <Card>
                         <CardImg top width="100%" src={logo} alt="Card image cap" />
                         <CardBody>
+                        <CardSubtitle tag="h6" className="mb-2 text-muted">ID: {recompensa.Id}</CardSubtitle>
                             <CardTitle tag="h5">{recompensa.Nome}</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">{recompensa.Resgate}</CardSubtitle>
                             <CardText><p>{recompensa.Descricao}</p></CardText>
@@ -41,9 +49,13 @@ export default class App extends Component {
                     
                     )
                 )}
+
+                <hr></hr>
+               
                 
             </div>
             );
+            
     }
 
 }

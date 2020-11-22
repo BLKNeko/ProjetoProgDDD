@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './custom.css'
 import requisicao from './Api'
-import axios from 'axios'
+
 
 class AppPost extends Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class AppPost extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        axios.post("https://localhost:44341/api/recompensas/adicionar", this.state)
+        requisicao.post("api/recompensas/adicionar", this.state)
         .then(response => {
             console.log(response)
         })

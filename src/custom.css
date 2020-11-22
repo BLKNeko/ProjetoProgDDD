@@ -1,4 +1,6 @@
 /* Provide sufficient contrast against white background */
+
+
 a {
   color: #0366d6;
 }
@@ -24,12 +26,70 @@ code {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  background: #EAFFFD;
   /*float: left; */
     
     
 }
 
-div{
-  display: inline-block;
+.lista{
+  float: left;
+  width: auto;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #EAFFFD;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav label {
+  float: right;
+  color: #EAFFFD;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #C9f0FF;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4059AD;
+  color: white;
+}
+
+.botton {
+  background-color: #333;
+  overflow: hidden;
+  height: 50px ;
+  float: inline-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.botton label{
+  color: #EAFFFD;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  bottom: 0;
 }
 

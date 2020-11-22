@@ -10,6 +10,7 @@ class AppPost extends Component {
         this.state = {
             nome: '',
             resgate: '',
+            icone: '',
             descricao: ''
         }
     }
@@ -31,7 +32,7 @@ class AppPost extends Component {
     }
 
     render() {
-        const {nome, resgate, descricao} = this.state
+        const {nome, resgate, descricao, icone} = this.state
         return(
             <div>
                 <form onSubmit={this.submitHandler}>
@@ -39,11 +40,15 @@ class AppPost extends Component {
                         <input type="text" name="nome" value={nome} onChange={this.changeHandler} />
                     </div>
                     <div>
-                        <input type="date" name="resgate" value={resgate} onChange={this.changeHandler} />
-                    </div>
-                    <div>
                         <input type="text" name="descricao" value={descricao} onChange={this.changeHandler} />
                     </div>
+                    <div>
+                        <input type="text" name="icone" value={icone} onChange={this.changeHandler} />
+                    </div>
+                    <div>
+                        <input type="date" name="resgate" value={resgate} onChange={this.changeHandler} />
+                    </div>
+                    
                     <button type="submit">Submit</button>
                 </form>
             </div>

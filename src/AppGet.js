@@ -6,9 +6,6 @@ import {
   CardTitle, CardSubtitle
 } from 'reactstrap';
 import logo from './assets/img.svg';
-import { Route, Switch, Link } from 'react-router-dom';
-import AppPut from './AppPut';
-import AppPost from './AppPost';
 
 
 

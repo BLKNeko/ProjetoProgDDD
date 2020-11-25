@@ -1,0 +1,14 @@
+* {
+  border: none;
+  text-decoration: none;
+  margin: 0;
+  color: inherit;
+}
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+
+  background-color: #E7E8E8;
+}

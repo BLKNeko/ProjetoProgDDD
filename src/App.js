@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import './custom.css'
+ import './style/landing.css'
 import requisicao from './Api'
-import { Route, Switch } from 'react-router-dom';
-import AppPut from './AppPut';
-import AppPost from './AppPost';
-import AppGet from './AppGet';
+import { Link } from 'react-router-dom';
+
+import landingImg from './assets/Party.png'
 
 
 
@@ -27,31 +26,32 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <div class="topnav">
-                <a class="active" href="/">Home</a>
-                <a href="/get">GET</a>
-                <a href="/post">POST</a>
-                <label>PARTICIPANDO PRA VALER</label>
-
-                
-                </div>
-                <div class="lista">
-                <Switch>
-                    <Route path="/get" component={AppGet}/>
-                    <Route path="/test" component={AppPut}/>
-                    <Route path="/post" component={AppPost}/>
-                </Switch>
+                <div class="top-bar">
+                    <Link  to="/">Home</Link>
+                    <Link to="/get">Recompensas</Link>
+                    <Link to="/post">Adicionar Recompensas</Link>
                 </div>
 
-                <div class="botton">
-                    <label>AUGUSTO RODRIGUES//DANILO MAIA//JOÃO PEDRO CARDOSO//RUDINEI COSTA</label>
+                <div className="image-container">
+                    <h1>Participando pra
+                         VALER</h1>
+                    <img src={landingImg} alt="landing image"/>
                 </div>
 
+                    
+                <footer>
+                    <span id="span-gameficacao">GAMIFICAÇÃO</span>
+                    <span>Aqui a participação é pra valer</span>
+
+                    <p>@AUGUSTO RODRIGUES//DANILO MAIA//JOÃO PEDRO CARDOSO//RUDINEI COSTA</p>   
+                </footer>
+               
             </div>
             );
             
     }
 
 }
+
 
 
